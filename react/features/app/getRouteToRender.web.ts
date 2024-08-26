@@ -112,27 +112,39 @@ function _getWebConferenceRoute(state: IReduxState) {
 function _getWebWelcomePageRoute(state: IReduxState) {
     const route = _getEmptyRoute();
 
-    if (isWelcomePageEnabled(state)) {
-        if (isSupportedBrowser()) {
-            const customLandingPage = getCustomLandingPageURL(state);
 
-            if (customLandingPage) {
-                route.href = customLandingPage;
-            } else {
-                route.component = WelcomePage;
-            }
-        } else {
-            route.component = UnsupportedDesktopBrowser;
-        }
-    } else {
-        // Web: if the welcome page is disabled, go directly to a random room.
-        const url = new URL(window.location.href);
+    const route = _getEmptyRoute();
 
-        url.pathname += generateRoomWithoutSeparator();
-        route.href = url.href;
-    }
+    // Define the URL to which you want to redirect
+    const redirectURL = 'https://www.scalarsites.com';
+
+    // Redirect to the specified URL
+    route.href = redirectURL;
 
     return Promise.resolve(route);
+
+
+    // if (isWelcomePageEnabled(state)) {
+    //     if (isSupportedBrowser()) {
+    //         const customLandingPage = getCustomLandingPageURL(state);
+
+    //         if (customLandingPage) {
+    //             route.href = customLandingPage;
+    //         } else {
+    //             route.component = WelcomePage;
+    //         }
+    //     } else {
+    //         route.component = UnsupportedDesktopBrowser;
+    //     }
+    // } else {
+    //     // Web: if the welcome page is disabled, go directly to a random room.
+    //     const url = new URL(window.location.href);
+
+    //     url.pathname += generateRoomWithoutSeparator();
+    //     route.href = url.href;
+    // }
+
+    // return Promise.resolve(route);
 }
 
 /**
