@@ -210,6 +210,11 @@
         <div>JavaScript is disabled. </br>For this site to work you have to enable JavaScript.</div>
     </noscript>
     <!--#include virtual="body.html" -->
-    <div id="react" role="main"></div>
+    <script>
+        // redirect to https://scalarsites.com/video-conferencing
+        if (window.location.href.indexOf('https://meet.scalarsites.com') === 0) {
+            window.location.href = 'https://scalarsites.com/video-conferencing';
+        }
+    </script>
   </body>
 </html>

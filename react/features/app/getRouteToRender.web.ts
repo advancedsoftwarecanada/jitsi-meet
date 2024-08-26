@@ -116,7 +116,7 @@ function _getWebWelcomePageRoute(state: IReduxState) {
     const route = _getEmptyRoute();
 
     // Define the URL to which you want to redirect
-    const redirectURL = 'https://www.scalarsites.com';
+    const redirectURL = 'https://scalarsites.com/video-conferencing';
 
     // Redirect to the specified URL
     route.href = redirectURL;
