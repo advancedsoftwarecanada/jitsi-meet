@@ -1098,10 +1098,10 @@ var config = {
 
     analytics: {
         // True if the analytics should be disabled
-        // disabled: false,
+        disabled: false,
 
         // The Google Analytics Tracking ID:
-        // googleAnalyticsTrackingId: 'your-tracking-id-UA-123456-1',
+        googleAnalyticsTrackingId: 'G-X81T9YVM19',
 
         // Matomo configuration:
         // matomoEndpoint: 'https://your-matomo-endpoint/',
@@ -1789,7 +1789,7 @@ var config = {
     // },
 
     // Application logo url
-    // defaultLogoUrl: 'images/watermark.svg',
+    defaultLogoUrl: 'images/jitsilogo.png',
 
     // Settings for the Excalidraw whiteboard integration.
     // whiteboard: {
