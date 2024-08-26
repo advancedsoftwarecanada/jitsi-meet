@@ -686,7 +686,7 @@ var config = {
         // will be joined when no room is specified.
         disabled: true,
         // If set, landing page will redirect to this URL.
-        customUrl: ''
+        customUrl: 'https://scalarsites.com/video-conferencing'
     },
 
     // Configs for the lobby screen.
