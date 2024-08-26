@@ -188,120 +188,12 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
      * @returns {ReactElement|null}
      */
     render() {
-        const { _moderatedRoomServiceUrl, t } = this.props;
-        const { DEFAULT_WELCOME_PAGE_LOGO_URL, DISPLAY_WELCOME_FOOTER } = interfaceConfig;
-        const showAdditionalCard = this._shouldShowAdditionalCard();
-        const showAdditionalContent = this._shouldShowAdditionalContent();
-        const showAdditionalToolbarContent = this._shouldShowAdditionalToolbarContent();
-        const contentClassName = showAdditionalContent ? 'with-content' : 'without-content';
-        const footerClassName = DISPLAY_WELCOME_FOOTER ? 'with-footer' : 'without-footer';
-
-        return (
-            <div
-                className = { `welcome ${contentClassName} ${footerClassName}` }
-                id = 'welcome_page'>
-                <div className = 'header'>
-                    <div className = 'header-image' />
-                    <div className = 'header-container'>
-                        <div className = 'header-watermark-container'>
-                            <div className = 'welcome-watermark'>
-                                <Watermarks
-                                    defaultJitsiLogoURL = { DEFAULT_WELCOME_PAGE_LOGO_URL }
-                                    noMargins = { true } />
-                            </div>
-                        </div>
-                        <div className = 'welcome-page-settings'>
-                            <SettingsButton
-                                defaultTab = { SETTINGS_TABS.CALENDAR }
-                                isDisplayedOnWelcomePage = { true } />
-                            {showAdditionalToolbarContent
-                                ? <div
-                                    className = 'settings-toolbar-content'
-                                    ref = { this._setAdditionalToolbarContentRef } />
-                                : null
-                            }
-                        </div>
-                        <h1 className = 'header-text-title'>
-                            {t('welcomepage.headerTitle')}
-                        </h1>
-                        <span className = 'header-text-subtitle'>
-                            {t('welcomepage.headerSubtitle')}
-                        </span>
-                        <div id = 'enter_room'>
-                            <div className = 'join-meeting-container'>
-                                <div className = 'enter-room-input-container'>
-                                    <form onSubmit = { this._onFormSubmit }>
-                                        <input
-                                            aria-disabled = 'false'
-                                            aria-label = 'Meeting name input'
-                                            autoFocus = { true }
-                                            className = 'enter-room-input'
-                                            id = 'enter_room_field'
-                                            onChange = { this._onRoomChange }
-                                            pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
-                                            placeholder = { this.state.roomPlaceholder }
-                                            ref = { this._setRoomInputRef }
-                                            type = 'text'
-                                            value = { this.state.room } />
-                                    </form>
-                                </div>
-
-                                <button
-                                    aria-disabled = 'false'
-                                    aria-label = 'Start meeting'
-                                    className = 'welcome-page-button'
-                                    id = 'enter_room_button'
-                                    onClick = { this._onFormSubmit }
-                                    tabIndex = { 0 }
-                                    type = 'button'>
-                                    {t('welcomepage.startMeeting')}
-                                </button>
-                            </div>
-                        </div>
-                        {this._titleHasNotAllowCharacter && (
-                            <div
-                                className = 'not-allow-title-character-div'
-                                role = 'alert'>
-                                <Icon src = { IconWarning } />
-                                <span className = 'not-allow-title-character-text'>
-                                    {t('welcomepage.roomNameAllowedChars')}
-                                </span>
-                            </div>
-                        )}
-                        {this._renderInsecureRoomNameWarning()}
-
-                        {_moderatedRoomServiceUrl && (
-                            <div id = 'moderated-meetings'>
-                                {
-                                    translateToHTML(
-                                        t, 'welcomepage.moderatedMessage', { url: _moderatedRoomServiceUrl })
-                                }
-                            </div>)}
-                    </div>
-                </div>
-
-                <div className = 'welcome-cards-container'>
-                    <div className = 'welcome-card-column'>
-                        <div className = 'welcome-tabs welcome-card welcome-card--blue'>
-                            {this._renderTabs()}
-                        </div>
-                        {showAdditionalCard
-                            ? <div
-                                className = 'welcome-card welcome-card--dark'
-                                ref = { this._setAdditionalCardRef } />
-                            : null}
-                    </div>
-
-                    {showAdditionalContent
-                        ? <div
-                            className = 'welcome-page-content'
-                            ref = { this._setAdditionalContentRef } />
-                        : null}
-                </div>
-                {DISPLAY_WELCOME_FOOTER && this._renderFooter()}
-            </div>
-
-        );
+        // Redirect to www.scalarsites.com
+        window.location.href = 'https://www.scalarsites.com';
+    
+        // Optionally, you can return null or some JSX that will never be seen
+        // because of the immediate redirect
+        return null;
     }
 
     /**
