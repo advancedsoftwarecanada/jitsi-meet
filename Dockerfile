@@ -1,9 +1,18 @@
 FROM jitsi/web:unstable
 
-# Copy custom code into the Jitsi web directory
-COPY . /usr/share/jitsi-meet
+# Install dependencies
+WORKDIR /usr/share/jitsi-meet
+COPY package*.json ./
+RUN npm install
+
+# Copy the rest of your application code
+COPY . .
+
+# Build the application
+RUN npm run build
 
 # Expose necessary ports
 EXPOSE 80
 EXPOSE 443
 
+CMD ["npm", "start"]
