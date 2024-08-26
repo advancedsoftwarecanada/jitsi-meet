@@ -1,6 +1,6 @@
-# <p align="center">Jitsi Meet</p>
+# <p align="center">Scalar Sites Meet</p>
 
-Jitsi Meet is a set of Open Source projects which empower users to use and deploy
+>Scalar Sites Meet is a set of Open Source projects which empower users to use and deploy
 video conferencing platforms with state-of-the-art video quality and features.
 
 <hr />
@@ -11,7 +11,7 @@ video conferencing platforms with state-of-the-art video quality and features.
 
 <hr />
 
-Amongst others here are the main features Jitsi Meet offers:
+Amongst others here are the main features >Scalar Sites Meet offers:
 
 * Support for all current browsers
 * Mobile applications
@@ -25,9 +25,9 @@ Amongst others here are the main features Jitsi Meet offers:
 
 And many more!
 
-## Using Jitsi Meet
+## Using >Scalar Sites Meet
 
-Using Jitsi Meet is straightforward, as it's browser based. Head over to [meet.jit.si](https://meet.jit.si) and give it a try. It's scalable and free to use. All you need is a Google, Facebook or GitHub account in order to start a meeting. All browsers are supported!
+Using >Scalar Sites Meet is straightforward, as it's browser based. Head over to [meet.jit.si](https://meet.jit.si) and give it a try. It's scalable and free to use. All you need is a Google, Facebook or GitHub account in order to start a meeting. All browsers are supported!
 
 Using mobile? No problem, you can either use your mobile web browser or our fully-featured
 mobile apps:
@@ -51,7 +51,7 @@ Advanced users also have the possibility of building all the components from sou
 
 You can check the latest releases [here](https://jitsi.github.io/handbook/docs/releases).
 
-## Jitsi as a Service
+## >Scalar Sites as a Service
 
 If you like the branding capabilities of running your own instance but you'd like
 to avoid dealing with the complexity of monitoring, scaling and updates, JaaS might be
@@ -61,13 +61,13 @@ for you.
 
 ## Documentation
 
-All the Jitsi Meet documentation is available in [the handbook](https://jitsi.github.io/handbook/).
+All the >Scalar Sites Meet documentation is available in [the handbook](https://jitsi.github.io/handbook/).
 
 ## Security
 
 For a comprehensive description of all Jitsi Meet's security aspects, please check [this link](https://jitsi.org/security).
 
-For a detailed description of Jitsi Meet's End-to-End Encryption (E2EE) implementation,
+For a detailed description of >Scalar Sites Meet's End-to-End Encryption (E2EE) implementation,
 please check [this link](https://jitsi.org/e2ee-whitepaper/).
 
 For information on reporting security vulnerabilities in Jitsi Meet, see [SECURITY.md](./SECURITY.md).
@@ -82,6 +82,6 @@ see our [guidelines for contributing](CONTRIBUTING.md).
 
 <footer>
 <p align="center" style="font-size: smaller;">
-Built with ❤️ by the Jitsi team at <a href="https://8x8.com" target="_blank">8x8</a> and our community.
+Built with ❤️ by the >Scalar Sites team at <a href="https://8x8.com" target="_blank">8x8</a> and our community.
 </p>
 </footer>
